@@ -1,0 +1,66 @@
+.container{
+  width:800px;
+  background: #ddd;
+  margin: 40px auto;
+  display: grid;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: 150px 150px 150px;
+  /* create gaps between rows and columns */
+  grid-row-gap: 30px;
+  grid-column-gap: 20px;
+  /* shorthand for above is first value row second column */
+  grid-gap: 40px 20px;
+  /* grid-gap: 40px; for same values */
+  /* taken a extra space use auto its one way you can give auto auto auto  */
+  grid-template-columns: 150px 150px auto;
+  /* other way is fr special unit for grid 
+  if we want twice bigger than first use 2fr in second
+  you can use fr to row also if your not define container height
+  it will takeup s[ace for only to display the content
+  if you give height in container it takes full height becoz of fr*/
+  grid-template-columns: 1fr 2fr 1fr;
+  /* if three repeted values */
+  grid-template-columns:repeat(3,1fr);
+  /* grid-template-columns:50% repeat(2,1fr) */
+
+
+
+}
+.item{
+  padding: 30px;
+  font: 30px;
+  color: white;
+
+}
+.items-1{
+  background-color:orange ;
+  /* positioning */
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.items-2{
+  background-color: olive;
+  /* shothand for positioning */
+  grid-row: 2/3;
+
+}
+.items-3{
+  background-color:blue ;
+  /* more shorter way */
+  /* grid-area:; */
+  /* grid-column: 3/4;
+  grid-row: 1/1; */
+}
+.items-4{
+  background-color:green ;
+  /* if want to stretch use same start colum and end in diff or use -1 or span 2 lines */
+  
+}
+.items-5{
+  background-color:red ;
+}
+.items-6{
+  background-color:palegoldenrod ;
+}
